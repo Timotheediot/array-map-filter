@@ -22,9 +22,15 @@ Sortie attendue:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
  */
+const tabIn = ['Bran Stark', 'Cersei Lannister', 'Sandor Clegane', 'Arya Stark', 'Yara Greyjoy', 'Sansa Stark'];
 
 function keepStarks(names) {
+  return names.endsWith('Stark')
 }
+
+const familyStark = tabIn.filter(keepStarks);
+console.log(familyStark)
+
 
 // Ne pas modifier l'export
 module.exports = keepStarks;
