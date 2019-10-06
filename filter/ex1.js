@@ -11,8 +11,14 @@ Sortie attendue:
 
  */
 
+const tabIn =  [7, -4, 2, 0, -10, 3, 11];
+
 function getPositiveNumbers(numbers) {
+  return numbers >= 0
 }
+const filtered = tabIn.filter(getPositiveNumbers);
+console.log(filtered)
+
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node filter/ex1
