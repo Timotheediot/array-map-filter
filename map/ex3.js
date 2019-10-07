@@ -58,7 +58,7 @@ En sortie:
   ]
 
  */
-const films =   [
+const movies =   [
   {
     name: 'Crazy Rich Asians',
     rating: 93
@@ -78,19 +78,22 @@ const films =   [
 ]
 
 
-function getMoviesFreshness(movies, rating) {
-  if (movies.rating < 60 ) {
-    return rating = "label: rotten"
-  } if (movies.rating >= 60 && movies.rating <= 70){
-    return rating = "label: fresh"
-  } if (movies.rating > 70){
-    return rating = "label: certified fresh"
+const getMoviesFreshness = movies => {
+  return movies.map(movie => {
+    if (movie.rating < 60 ) {
+    movie.label = "rotten"
+  } else if (movie.rating >= 60 && movie.rating <= 75){
+    movie.label = "fresh"
+  } else if (movie.rating > 75){
+    movie.label = "certified fresh"
   }
+  return movie
+})
 }
 
-const checkListFilm = films.map(getMoviesFreshness)
-console.log(films)
-console.log(checkListFilm)
+
+console.log(getMoviesFreshness(movies))
+
 
 
 
